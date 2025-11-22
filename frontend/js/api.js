@@ -5,8 +5,8 @@ const getApiBaseUrl = () => {
   const protocol = window.location.protocol;
   const isLocal = hostname === 'localhost' || hostname === '127.0.0.1';
   
-  // Production URL - UPDATE THIS after deploying to Render/Vercel/etc
-  const PRODUCTION_API_URL = 'https://sunshine-stretch-backend.onrender.com/api';
+  // Production URL - Your deployed backend
+  const PRODUCTION_API_URL = 'https://sunshine-stretch-backend-1p4j.onrender.com/api';
   
   // If on localhost, use local backend
   if (isLocal) {
