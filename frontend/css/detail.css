@@ -1,0 +1,230 @@
+.asana-detail {
+  min-height: calc(100vh - 80px);
+  padding: 40px 0;
+}
+
+.back-button {
+  background: var(--white);
+  color: var(--primary-purple);
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  font-size: 16px;
+  font-weight: 600;
+  box-shadow: 0 2px 10px var(--shadow);
+  border: 2px solid var(--primary-purple);
+  cursor: pointer;
+}
+
+.back-button:hover {
+  background: var(--primary-purple);
+  color: var(--white);
+}
+
+.asana-detail-content {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 40px;
+  background: var(--white);
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 4px 20px var(--shadow);
+}
+
+.asana-detail-image {
+  width: 100%;
+}
+
+.asana-detail-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px var(--shadow);
+}
+
+.image-placeholder-large {
+  width: 100%;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--primary-yellow) 0%, var(--primary-purple) 100%);
+  border-radius: 15px;
+}
+
+.image-placeholder-large .placeholder-icon {
+  font-size: 120px;
+  opacity: 0.7;
+}
+
+.asana-detail-info {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.asana-header h1 {
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--primary-purple);
+  margin-bottom: 10px;
+}
+
+.sanskrit-name {
+  font-size: 20px;
+  color: var(--gray-dark);
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.asana-meta {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.difficulty-badge.detail {
+  padding: 8px 16px;
+  border-radius: 20px;
+  color: var(--white);
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.difficulty-badge.detail.beginner {
+  background-color: #4CAF50;
+}
+
+.difficulty-badge.detail.intermediate {
+  background-color: #FF9800;
+}
+
+.difficulty-badge.detail.advanced {
+  background-color: #F44336;
+}
+
+.category-badge {
+  background: linear-gradient(135deg, var(--primary-purple) 0%, var(--purple-dark) 100%);
+  color: var(--white);
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.duration-badge {
+  background: var(--gray-light);
+  color: var(--gray-dark);
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.asana-section {
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--gray-medium);
+}
+
+.asana-section:last-of-type {
+  border-bottom: none;
+}
+
+.asana-section h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--primary-purple);
+  margin-bottom: 15px;
+}
+
+.asana-section p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--text-dark);
+}
+
+.benefits-list {
+  list-style: none;
+  padding: 0;
+}
+
+.benefits-list li {
+  padding: 10px 0;
+  font-size: 16px;
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+.instructions-list {
+  padding-left: 20px;
+}
+
+.instructions-list li {
+  padding: 12px 0;
+  font-size: 16px;
+  color: var(--text-dark);
+  line-height: 1.8;
+}
+
+.complete-section,
+.auth-prompt {
+  background: linear-gradient(135deg, var(--yellow-light) 0%, #E6E6FA 100%);
+  padding: 25px;
+  border-radius: 15px;
+  margin-top: 20px;
+}
+
+.complete-section h2,
+.auth-prompt h2 {
+  margin-bottom: 20px;
+  color: var(--primary-purple);
+}
+
+.duration-input-group {
+  margin-bottom: 20px;
+}
+
+.duration-input-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: var(--primary-purple);
+}
+
+.duration-input {
+  width: 100%;
+  max-width: 200px;
+  padding: 12px;
+  border: 2px solid var(--gray-medium);
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+.duration-input:focus {
+  border-color: var(--primary-purple);
+  outline: none;
+}
+
+.auth-prompt {
+  text-align: center;
+}
+
+.auth-prompt p {
+  margin-bottom: 20px;
+  font-size: 16px;
+  color: var(--text-dark);
+}
+
+@media (max-width: 968px) {
+  .asana-detail-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .asana-header h1 {
+    font-size: 28px;
+  }
+}
+

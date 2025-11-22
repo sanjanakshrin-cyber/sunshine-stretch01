@@ -1,0 +1,234 @@
+.dashboard {
+  min-height: calc(100vh - 80px);
+  padding: 40px 0;
+}
+
+.dashboard-subtitle {
+  text-align: center;
+  font-size: 20px;
+  color: var(--gray-dark);
+  margin-bottom: 40px;
+}
+
+.dashboard-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 25px;
+  margin-bottom: 50px;
+}
+
+.stat-card {
+  background: linear-gradient(135deg, var(--primary-yellow) 0%, var(--primary-purple) 100%);
+  border-radius: 20px;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  box-shadow: 0 4px 20px var(--shadow);
+  color: var(--white);
+}
+
+.stat-icon {
+  font-size: 48px;
+}
+
+.stat-content h3 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.stat-content p {
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+.dashboard-section {
+  background: var(--white);
+  border-radius: 20px;
+  padding: 30px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 20px var(--shadow);
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.dashboard-section h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--primary-purple);
+  margin-bottom: 15px;
+}
+
+.section-description {
+  color: var(--gray-dark);
+  margin-bottom: 25px;
+  font-size: 16px;
+}
+
+.goals-selector {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.goal-button {
+  background: var(--gray-light);
+  border: 2px solid var(--gray-medium);
+  padding: 15px 25px;
+  border-radius: 15px;
+  font-size: 16px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.goal-button:hover {
+  border-color: var(--primary-purple);
+  background: var(--white);
+}
+
+.goal-button.active {
+  background: linear-gradient(135deg, var(--primary-yellow) 0%, var(--primary-purple) 100%);
+  border-color: var(--primary-purple);
+  color: var(--white);
+}
+
+.goal-icon {
+  font-size: 24px;
+}
+
+.goals-display {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.goal-badge {
+  background: linear-gradient(135deg, var(--primary-purple) 0%, var(--purple-dark) 100%);
+  color: var(--white);
+  padding: 12px 20px;
+  border-radius: 20px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.no-goals {
+  color: var(--gray-dark);
+  font-style: italic;
+}
+
+.recommendations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 25px;
+  margin-top: 25px;
+}
+
+.completed-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.completed-item {
+  padding: 15px;
+  background: var(--gray-light);
+  border-radius: 10px;
+}
+
+.completed-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+}
+
+.completed-name {
+  font-weight: 600;
+  color: var(--primary-purple);
+}
+
+.completed-date {
+  color: var(--gray-dark);
+  font-size: 14px;
+}
+
+.view-all-link {
+  display: inline-block;
+  margin-top: 20px;
+  color: var(--primary-purple);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.view-all-link:hover {
+  text-decoration: underline;
+}
+
+.category-progress {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.category-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.category-name {
+  min-width: 120px;
+  font-weight: 600;
+  text-transform: capitalize;
+  color: var(--primary-purple);
+}
+
+.progress-bar {
+  flex: 1;
+  height: 25px;
+  background: var(--gray-light);
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(135deg, var(--primary-yellow) 0%, var(--primary-purple) 100%);
+  transition: width 0.3s ease;
+}
+
+.category-count {
+  min-width: 40px;
+  text-align: right;
+  font-weight: 600;
+  color: var(--gray-dark);
+}
+
+@media (max-width: 768px) {
+  .dashboard-stats {
+    grid-template-columns: 1fr;
+  }
+  
+  .recommendations-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+}
+

@@ -1,0 +1,43 @@
+# Render Blueprint for Easy Deployment
+# Deploy both services with one click!
+#
+# HOW TO USE:
+# 1. Push this file to GitHub
+# 2. Go to https://dashboard.render.com/new/blueprint
+# 3. Connect your GitHub repository
+# 4. Render will detect this file automatically
+# 5. Set environment variables (MONGODB_URI, JWT_SECRET) in Render dashboard
+# 6. Deploy!
+
+services:
+  # Backend API Service
+  - type: web
+    name: sunshine-stretch-backend
+    env: node
+    plan: free
+    region: oregon  # Change to your preferred region
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      # IMPORTANT: Set these in Render dashboard after creating services
+      - key: MONGODB_URI
+        sync: false  # Paste your MongoDB Atlas connection string here
+      - key: JWT_SECRET
+        sync: false  # Generate a random secret key
+      - key: FRONTEND_URL
+        sync: false  # Set after frontend deploys: https://sunshine-stretch-frontend.onrender.com
+
+  # Frontend Static Site
+  - type: web
+    name: sunshine-stretch-frontend
+    env: static
+    buildCommand: echo "No build needed for static site"
+    staticPublishPath: frontend
+    # No environment variables needed for static site
+    # API URL is configured in frontend/js/api.js
+

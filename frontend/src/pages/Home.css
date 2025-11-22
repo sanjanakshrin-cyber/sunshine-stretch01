@@ -1,0 +1,131 @@
+.home {
+  min-height: calc(100vh - 80px);
+}
+
+.hero {
+  background: linear-gradient(135deg, var(--primary-yellow) 0%, var(--primary-purple) 100%);
+  padding: 80px 20px;
+  text-align: center;
+  color: var(--white);
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero-title {
+  font-size: 48px;
+  font-weight: 800;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, var(--white) 0%, var(--yellow-light) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-subtitle {
+  font-size: 20px;
+  margin-bottom: 40px;
+  opacity: 0.95;
+  line-height: 1.6;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-large {
+  padding: 16px 32px;
+  font-size: 18px;
+}
+
+.features,
+.categories {
+  padding: 80px 20px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 50px;
+  color: var(--primary-purple);
+}
+
+.features-grid,
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.feature-card,
+.category-card {
+  background: var(--white);
+  border-radius: 20px;
+  padding: 40px 30px;
+  text-align: center;
+  box-shadow: 0 4px 20px var(--shadow);
+  transition: all 0.3s ease;
+  text-decoration: none;
+  color: inherit;
+}
+
+.category-card {
+  cursor: pointer;
+}
+
+.feature-card:hover,
+.category-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 30px var(--shadow-hover);
+}
+
+.feature-icon,
+.category-icon {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.feature-card h3,
+.category-card h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: var(--primary-purple);
+}
+
+.feature-card p,
+.category-card p {
+  color: var(--gray-dark);
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 32px;
+  }
+  
+  .hero-subtitle {
+    font-size: 18px;
+  }
+  
+  .section-title {
+    font-size: 28px;
+  }
+  
+  .features-grid,
+  .categories-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
